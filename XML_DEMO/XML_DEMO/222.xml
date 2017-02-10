@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GB2312" standalone="yes" ?>
+<HvcResultDoc>
+    <ResultSet>
+        <Result>
+            <PlateName>蓝桂AH8611</PlateName>
+            <Color raw_value="1" value="1" />
+            <Type raw_value="1" value="1" />
+            <ReverseRun value="否" chnname="车辆逆向行驶" />
+            <ObservedFrames value="2" chnname="有效帧数" />
+            <Confidence value="0.876" chnname="平均可信度" />
+            <FirstCharConf value="0.986" chnname="首字可信度" />
+            <CarArriveTime value="2015-04-14 16:34:39:013" chnname="车辆检测时间" />
+            <CarType value="小" chnname="车辆类型" />
+            <RoadNumber value="0" chnname="车道" />
+            <BeginRoadNumber value="&lt;左,0&gt;" chnname="起始车道号" />
+            <StreetName value="" chnname="路口名称" />
+            <StreetDirection value="" chnname="路口方向" />
+            <EventCheck value="压线:无&#x0A;越线:无&#x0A;" chnname="事件检测" />
+            <FrameName value="VPIF" chnname="视频帧名" />
+            <PlateLightType value="10级" chnname="摄像机亮度等级" />
+            <CplStatus value="-1" chnname="偏光镜状态" />
+            <AmbientLight value="178" chnname="环境亮度" />
+            <PlateLight value="103" chnname="车牌亮度" />
+            <PlateVariance value="18" chnname="车牌对比度" />
+            <CarID value="1036" />
+            <TimeHigh value="332" />
+            <TimeLow value="-1223629755" />
+        </Result>
+    </ResultSet>
+    <ResultExtInfo>
+        <TransmittingType>Realtime</TransmittingType>
+        <Image0 PlatePosLeft="12" PlatePosRight="19" PlatePosTop="28" PlatePosBottom="33" Time="2250853" Width="1920" Height="1080" TimeHigh="332" TimeLow="-1223630395" />
+        <Image1 PlatePosLeft="12" PlatePosRight="19" PlatePosTop="28" PlatePosBottom="33" Time="2250853" Width="1920" Height="1080" TimeHigh="332" TimeLow="-1223630395">
+            <FaceInfo Count="0" />
+        </Image1>
+        <Image5 PlatePosLeft="0" PlatePosRight="0" PlatePosTop="0" PlatePosBottom="0" Time="2251493" Width="131" Height="52" TimeHigh="332" TimeLow="-1223629755" />
+        <Image6 PlatePosLeft="0" PlatePosRight="0" PlatePosTop="0" PlatePosBottom="0" Time="2251493" Width="112" Height="20" TimeHigh="332" TimeLow="-1223629755" />
+    </ResultExtInfo>
+</HvcResultDoc>

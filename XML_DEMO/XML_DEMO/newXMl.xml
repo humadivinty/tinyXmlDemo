@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GB2312" standalone="yes" ?>
+<HvcResultDoc>
+    <ResultSet>
+        <Result>
+            <PlateName>&quot;桂A12345&quot;</PlateName>
+            <Color raw_value="0" value="0" />
+            <Type raw_value="0" value="0" />
+            <ReverseRun value="否" chnname="车辆逆向行驶" />
+            <ObservedFrames value="0" chnname="有效帧数" />
+            <Confidence value="0.000" chnname="平均可信度" />
+            <FirstCharConf value="0.000" chnname="首字可信度" />
+            <CarArriveTime value="2014-11-10 10:49:01:399" chnname="车辆检测时间" />
+            <CarType value=" " chnname="车辆类型" />
+            <RoadNumber value="1" chnname="车道" />
+            <BeginRoadNumber value="&lt;左,0&gt;" chnname="起始车道号" />
+            <StreetName value="" chnname="路口名称" />
+            <StreetDirection value="" chnname="路口方向" />
+            <EventCheck value="车道类型:直行&#x0A;行驶类型:直行&#x0A;违章:否&#x0A;压线:无&#x0A;越线:无&#x0A;停止线前:直??;左??;右??;调??&#x0A;停止线后:直??;左??;右??;调??" chnname="事件检测" />
+            <FrameName value="VPIF" chnname="视频帧名" />
+            <PlateLightType value="04级" chnname="摄像机亮度等级" />
+            <CplStatus value="-1" chnname="偏光镜状态" />
+            <AmbientLight value="76" chnname="环境亮度" />
+            <PlateLight value="0" chnname="车牌亮度" />
+            <PlateVariance value="0" chnname="车牌对比度" />
+            <CarID value="4172" />
+            <TimeHigh value="1111" />
+            <TimeLow value="2222" />
+        </Result>
+    </ResultSet>
+    <ResultExtInfo>
+        <TransmittingType>RealTime</TransmittingType>
+    </ResultExtInfo>
+</HvcResultDoc>
+�

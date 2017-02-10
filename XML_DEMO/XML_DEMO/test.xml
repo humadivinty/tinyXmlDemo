@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<Persons>
+    <Person ID="1">
+        <name>周星星</name>
+        <age>22</age>
+    </Person>
+</Persons>
