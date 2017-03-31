@@ -20,3 +20,7 @@ TiXmlElement SelectElementByName(char* InputInfo, char* pName, int iXMLType);
 TiXmlElement* ReadElememt(TiXmlElement* InputElement,  char* pName);
 
 TiXmlElement ReadXmlByStack(char* InputInfo, char* pName,int iXMLType, bool& bFind);
+
+bool InsertChildElement(TiXmlElement* InputElement, char* pName, char* pchValue);
+
+bool InserChildAfterSpecifiedElementByName( char* InputInfo, int iXMLType,char* pchOutBuffer, int& iBufferlenth, char* pSourceName, char* pchDestName ,char* pchDestValue );

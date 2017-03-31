@@ -245,3 +245,88 @@ TiXmlElement ReadXmlByStack(char* InputInfo, char* pName,int iXMLType, bool& bFi
 		}		
 	}
 }
+
+
+
+bool InsertChildElement( TiXmlElement* InputElement, char* pName, char* pchValue )
+{
+	if (InputElement == NULL || pName == NULL || pchValue == NULL)
+	{
+		return false;
+	}
+	TiXmlElement* pAddElement = new TiXmlElement(pName);
+	pAddElement->LinkEndChild(new TiXmlText(pchValue));
+	InputElement->LinkEndChild(pAddElement);
+	return true;
+}
+
+bool InserChildAfterSpecifiedElementByName( char* InputInfo, int iXMLType,char* pchOutBuffer, int& iBufferlenth, char* pSourceName, char* pchDestName ,char* pchDestValue )
+{
+	//注：XMLTYPE 为1时，InputInfo为XML路径，当为2时,InputInfo为二进制文件内容
+	TiXmlDocument cXmlDoc;
+	TiXmlElement* pRootElement = NULL;
+	if (iXMLType == 1)
+	{
+		if (!cXmlDoc.LoadFile(InputInfo))
+		{
+			printf("parse XML file failed \n");
+			return false;
+		}
+	}
+	else if (iXMLType == 2)
+	{
+		if (!cXmlDoc.Parse(InputInfo))
+		{
+			printf("parse XML failed \n");
+			return false;
+		}
+	}
+
+	pRootElement = cXmlDoc.RootElement();
+	if (NULL == pRootElement)
+	{
+		printf("no have root Element\n");
+		return false;
+	}
+	else
+	{
+		TiXmlElement* pTempElement = NULL;
+		pTempElement = ReadElememt(pRootElement, pSourceName);
+		if (!pTempElement)
+		{
+			return false;			
+		}
+		printf("find the Name : %s, Text = %s\n", pTempElement->Value(), pTempElement->GetText());
+		if (InsertChildElement(pTempElement, pchDestName, pchDestValue))
+		{
+			printf("Insert Element success.\n");
+
+			if (iXMLType ==1)
+			{
+				cXmlDoc.SaveFile();
+			}
+			else
+			{
+				TiXmlPrinter streamer;
+				cXmlDoc.Accept(&streamer)	;
+				if (iBufferlenth >= strlen(streamer.CStr()))
+				{
+					iBufferlenth = strlen(streamer.CStr());
+					memcpy(pchOutBuffer, streamer.CStr(), strlen(streamer.CStr()));		
+				}
+				else
+				{
+					iBufferlenth = strlen(streamer.CStr());
+					//printf("the Buffer lenth is not enough");
+					return false;
+				}
+			}
+			return true;
+		}
+		else
+		{
+			printf("Insert Element failed.\n");
+			return false;
+		}		
+	}	
+}
